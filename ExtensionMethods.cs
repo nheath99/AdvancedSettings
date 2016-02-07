@@ -39,11 +39,28 @@ namespace AdvancedSettings
             return default(T);
         }
 
+        /// <summary>
+        /// Returns the maximum item of a sequence, using the default comparer on the specified selector.
+        /// </summary>
+        /// <typeparam name="TSource"></typeparam>
+        /// <typeparam name="TKey"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         public static TSource MaxBy<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> selector)
         {
             return source.MaxBy(selector, Comparer<TKey>.Default);
         }
 
+        /// <summary>
+        /// Returns the maximum item of a sequence, using the specified comparer on the specified selector.
+        /// </summary>
+        /// <typeparam name="TSource"></typeparam>
+        /// <typeparam name="TKey"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="selector"></param>
+        /// <param name="comparer"></param>
+        /// <returns></returns>
         public static TSource MaxBy<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> selector, IComparer<TKey> comparer)
         {
             if (source == null)

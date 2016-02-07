@@ -49,12 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TBDA.Common\TBDA.Common.csproj">
-      <Project>{677731f7-1e38-4466-8bce-8a4dd854352e}</Project>
-      <Name>TBDA.Common</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
